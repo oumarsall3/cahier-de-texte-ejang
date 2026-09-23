@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le cahier de texte électronique d'e-jàng</title>
+<meta name="description" content="Tenir le cahier de texte d'une classe sur une plateforme d'apprentissage nationale sans lui faire perdre sa valeur de preuve.">
+<style>
+  :root {
+    --bleu: #164F9E;
+    --marine: #123674;
+    --or: #E4BB38;
+    --texte: #1b2733;
+    --doux: #5b6b80;
+    --fond: #ffffff;
+    --bord: #e2e8f0;
+    --gris: #f6f8fb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--texte);
+    background: var(--fond);
+    line-height: 1.6;
+  }
+  .bandeau {
+    background: linear-gradient(105deg, #0f2d61 0%, var(--marine) 45%, var(--bleu) 100%);
+    color: #fff;
+    padding: 3.5rem 1.5rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .bandeau::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+    background: linear-gradient(90deg, var(--or) 0%, #FFD966 45%, transparent 100%);
+  }
+  .dedans { max-width: 940px; margin: 0 auto; }
+  .surtitre {
+    margin: 0 0 .4rem; font-size: .8rem; letter-spacing: .1em;
+    text-transform: uppercase; color: #FFD966;
+  }
+  h1 { margin: 0 0 .8rem; font-size: 2.3rem; line-height: 1.15; font-weight: 700; }
+  .chapo { margin: 0; font-size: 1.08rem; opacity: .93; max-width: 42rem; }
+  main { max-width: 940px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+  section { padding: 2.6rem 0 .6rem; }
+  h2 {
+    font-size: 1.4rem; color: var(--marine); margin: 0 0 1rem;
+    padding-bottom: .5rem; border-bottom: 2px solid var(--or); display: inline-block;
+  }
+  h3 { font-size: 1.05rem; color: var(--marine); margin: 1.6rem 0 .5rem; }
+  p { margin: 0 0 1rem; }
+  .encart {
+    background: var(--gris); border-left: 3px solid var(--bleu);
+    padding: 1.1rem 1.3rem; border-radius: 0 10px 10px 0; margin: 1.4rem 0;
+  }
+  .encart p:last-child { margin-bottom: 0; }
+  figure { margin: 1.8rem 0; }
+  figure img {
+    width: 100%; height: auto; display: block;
+    border: 1px solid var(--bord); border-radius: 12px;
+    box-shadow: 0 2px 14px rgba(18, 54, 116, .09);
+  }
+  figcaption { margin-top: .6rem; font-size: .85rem; color: var(--doux); text-align: center; }
+  .deux { display: grid; grid-template-columns: 3fr 2fr; gap: 1.5rem; align-items: start; }
+  .deux figure { margin: 1rem 0; }
+  .etroit { max-width: 560px; margin-left: auto; margin-right: auto; }
+  .grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+  .carte { border: 1px solid var(--bord); border-radius: 12px; padding: 1.1rem 1.2rem; }
+  .carte .n { font-size: 1.9rem; font-weight: 700; color: var(--marine); line-height: 1; }
+  .carte .l { font-size: .87rem; color: var(--doux); margin-top: .4rem; display: block; }
+  table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: .93rem; }
+  th, td { text-align: left; padding: .6rem .7rem; border-bottom: 1px solid var(--bord); vertical-align: top; }
+  th { color: var(--marine); font-weight: 600; }
+  .pied {
+    border-top: 1px solid var(--bord); margin-top: 2.5rem; padding-top: 1.4rem;
+    font-size: .85rem; color: var(--doux);
+  }
+  .avert {
+    background: #fff8e6; border: 1px solid #f0d999; border-radius: 10px;
+    padding: 1rem 1.2rem; font-size: .9rem; margin: 1.6rem 0;
+  }
+  @media (max-width: 640px) {
+    h1 { font-size: 1.7rem; }
+    .bandeau { padding: 2.4rem 1.2rem 2rem; }
+    .deux { grid-template-columns: 1fr; }
+    table { font-size: .86rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="bandeau">
+  <div class="dedans">
+    <p class="surtitre">Étude de cas en ingénierie pédagogique et numérique</p>
+    <h1>Tenir le cahier de texte sur la plateforme sans lui faire perdre sa valeur de preuve</h1>
+    <p class="chapo">Une extension conçue pour <strong>e-jàng</strong>, la plateforme nationale de formation à distance de la formation professionnelle et technique du Sénégal. Chaque classe y tient son cahier de texte : le formateur écrit, la classe confirme, la surveillance tient l'appel, la direction et l'inspection visent.</p>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <h2>Le problème</h2>
+  <p>Dans un établissement de formation professionnelle et technique, le cahier de texte est la mémoire contractuelle de la classe. Le formateur y inscrit chaque séance : la compétence travaillée, les activités, l'évaluation, les absents. La surveillance le tient à jour. La direction le vise, l'inspection le contrôle. Sur papier, il ne se lit qu'en le tenant entre les mains.</p>
+  <p>Une plateforme d'apprentissage connaît des cours et des participants. Elle ne connaît ni la classe, ni la semaine, ni le visa. Aucune extension existante ne tenait ce document. Celle-ci a donc été écrite, avec trois exigences qui semblent se contredire.</p>
+
+  <h3>Trois exigences</h3>
+  <p><strong>La preuve.</strong> Un cahier que l'on peut réécrire ne prouve rien. Or une plateforme est faite pour modifier ce qu'on y dépose.</p>
+  <p><strong>L'adhésion.</strong> Un outil vécu comme une surveillance des formateurs est tenu en double, puis abandonné. Il doit d'abord servir celui qui écrit.</p>
+  <p><strong>La discrétion.</strong> Les absences et les faits de discipline concernent des apprenants, dont certains sont mineurs. Ils ne doivent être lus que par ceux qui en ont la charge.</p>
+</section>
+
+<section>
+  <h2>Le principe retenu</h2>
+  <div class="encart">
+    <p><strong>Rien ne s'efface.</strong> Une erreur se corrige par une écriture de plus, signée et datée. L'original reste lisible. Chaque geste porte un nom, une qualité et une date, comme une signature au bas du cahier papier.</p>
+  </div>
+  <p>Le cahier est utile au formateur avant d'être utile au contrôle. La séance précédente lui est rappelée, les objectifs spécifiques de son cours lui sont proposés, l'appel se fait par exception : « tous présents sauf ».</p>
+  <p>Aucun texte ne donne encore valeur au cahier électronique. Pendant le pilote, le cahier papier fait donc foi. L'établissement n'écrit pourtant qu'une fois : il saisit sur la plateforme, imprime la page de la semaine, la signe et la verse au cahier papier.</p>
+</section>
+
+<section>
+  <h2>Écrire une séance</h2>
+  <figure class="etroit">
+    <img src="images/saisie_seance.png" alt="Formulaire de saisie d'une séance : date, horaire, compétence, objectifs spécifiques, activités, appel par exception">
+    <figcaption>La saisie d'une séance. La séance précédente est rappelée en tête, l'appel ne demande que les absents.</figcaption>
+  </figure>
+  <p>Le formateur enregistre et vise d'un même geste. Une saisie faite en retard n'est jamais refusée : elle est marquée comme telle. La refuser pousserait à antidater. La date de la séance est déclarée par le formateur, la date de l'écriture est constatée par la plateforme. Les deux figurent sur la séance.</p>
+</section>
+
+<section>
+  <h2>La preuve</h2>
+  <figure class="etroit">
+    <img src="images/seance_visee.png" alt="Une séance visée, rectifiée puis confirmée par la classe, avec son empreinte et son journal">
+    <figcaption>Une séance visée par le formateur, rectifiée, puis confirmée par la classe. Données fictives.</figcaption>
+  </figure>
+
+  <table>
+    <tr><th>Règle</th><th>Ce qu'elle empêche</th></tr>
+    <tr><td>une séance visée ne se modifie plus</td><td>réécrire discrètement ce qui a été fait</td></tr>
+    <tr><td>une erreur se corrige par une rectification motivée, signée et datée</td><td>effacer une erreur au lieu de la reconnaître</td></tr>
+    <tr><td>chaque séance visée porte l'empreinte de son contenu</td><td>modifier une séance sans que cela se voie</td></tr>
+    <tr><td>chaque visa de période est rattaché au précédent</td><td>remanier une semaine déjà visée, même des mois plus tard</td></tr>
+    <tr><td>la classe confirme ou conteste chaque séance</td><td>inscrire une séance qui n'a pas eu lieu</td></tr>
+  </table>
+
+  <div class="encart">
+    <p>L'empreinte est une preuve de non-altération. Ce n'est pas une signature électronique au sens juridique. C'est pourquoi la page imprimée porte l'empreinte de chaque visa : le cahier papier, signé et versé, garde la trace hors de la plateforme.</p>
+  </div>
+</section>
+
+<section>
+  <h2>La page de la semaine</h2>
+  <figure>
+    <img src="images/page_imprimee.png" alt="Page imprimable de la semaine : séances, appel, formateur, visas de la surveillance, de la direction et de l'inspection">
+    <figcaption>La page de la semaine, prête à imprimer depuis un téléphone. Les visas déjà apposés y figurent avec leur empreinte.</figcaption>
+  </figure>
+  <p>C'est une page à imprimer et non un document à télécharger : elle reste légère et s'imprime depuis un téléphone. Aucun fait de discipline n'y figure jamais. Le nom des absents n'y apparaît que sur demande expresse : cette demande est tracée.</p>
+</section>
+
+<section>
+  <h2>Le tableau de bord</h2>
+  <div class="deux">
+    <figure>
+      <img src="images/tableau_direction.png" alt="Tableau de bord de la direction : cinq tuiles, alertes, visas attendus, absences à classer, discipline, classes muettes">
+      <figcaption>Le tableau de bord de la direction.</figcaption>
+    </figure>
+    <figure>
+      <img src="images/mobile_surveillant.png" alt="Le même tableau de bord sur un téléphone, pour le surveillant de classe" style="max-width: 330px; margin: 0 auto;">
+      <figcaption>Le même écran sur le téléphone du surveillant.</figcaption>
+    </figure>
+  </div>
+  <p>Cinq tuiles, toujours dans le même ordre. L'état de chacune se dit de trois façons à la fois : une couleur, un pictogramme et un mot. Toute la tuile est le bouton. Trois niveaux, jamais plus : la tuile, la liste, la fiche.</p>
+  <p><strong>Le silence n'est pas vert.</strong> Une classe où personne n'écrit n'apparaît jamais comme à jour : elle est comptée dans la dernière tuile. Le surveillant de classe, le surveillant général et la direction ont le même écran. Seul le périmètre change.</p>
+</section>
+
+<section>
+  <h2>Qui fait quoi</h2>
+  <table>
+    <tr><th>Acteur</th><th>Son rôle dans le cahier</th></tr>
+    <tr><td>Formateur</td><td>rédige et vise ses séances, fait l'appel</td></tr>
+    <tr><td>Responsable de classe</td><td>un apprenant choisi par sa classe : confirme ou conteste la séance, prévient quand le formateur ne vient pas</td></tr>
+    <tr><td>Surveillant de classe</td><td>tient le cahier à jour, saisit pour le compte d'un formateur absent, classe les absences, rend compte</td></tr>
+    <tr><td>Surveillant général</td><td>supplée, tranche une contestation, vise la période, suit l'établissement</td></tr>
+    <tr><td>Direction</td><td>suit le cahier de toutes les classes, appose le visa de la direction</td></tr>
+    <tr><td>Inspection</td><td>lit et vise dans son seul périmètre</td></tr>
+    <tr><td>Référent numérique</td><td>déclare les classes, règle ce qui se règle, clôture l'année. N'écrit jamais une séance</td></tr>
+  </table>
+  <p>La suppléance suit l'ordre de l'établissement : le surveillant de classe, à défaut le surveillant général, à défaut la direction. Chaque écriture dit en quelle qualité elle a été faite.</p>
+</section>
+
+<section>
+  <h2>La discrétion</h2>
+  <p>L'apprenant ordinaire ne voit ni le cahier de sa classe ni le relevé de ses absences. Les absences et les faits de discipline ne sont lus que par ceux qui en ont la charge. Le journal garde qui a fait quoi et quand. Il ne recopie jamais un motif d'absence ni une observation.</p>
+  <p>Les noms n'entrent pas dans l'empreinte d'une séance. Ils peuvent ainsi être retirés sur demande sans que la séance paraisse altérée. La durée de conservation des données personnelles se règle : une fois échue, le cahier demeure avec ses séances, ses nombres et ses visas, sans les personnes.</p>
+</section>
+
+<section>
+  <h2>Le déploiement</h2>
+  <p>La plateforme nationale se gère par son interface d'administration, sans accès au serveur. L'extension porte donc son propre outillage : une vérification de l'installation en neuf contrôles, puis le réglage des rôles, lu à blanc avant d'être appliqué en une seule confirmation, puis relu. Le dépôt a été répété de bout en bout sur un banc avant d'être fait sur la plateforme nationale.</p>
+</section>
+
+<section>
+  <h2>La vérification</h2>
+  <div class="grille">
+    <div class="carte"><span class="n">109</span><span class="l">contrôles automatisés, rejoués à chaque version</span></div>
+    <div class="carte"><span class="n">40</span><span class="l">classes en épreuve de charge : chaque écran garde le même nombre de lectures</span></div>
+    <div class="carte"><span class="n">2</span><span class="l">relectures indépendantes du code avant le dépôt</span></div>
+    <div class="carte"><span class="n">2</span><span class="l">versions de Moodle vérifiées, 4.5 et 5.2</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Ce que ce travail ne montre pas</h2>
+  <div class="avert">
+    <p><strong>Aucun code source, aucune donnée réelle.</strong> Les captures proviennent d'un banc de démonstration : l'établissement et les personnes portent des noms d'arbres et de fruits, précisément pour qu'aucune image ne puisse être confondue avec un établissement ou une personne réels. Aucune donnée de la plateforme n'est publiée ici.</p>
+    <p>Ce qui est présenté est la démarche : ce qu'il faut garder d'un document contractuel quand on le fait passer sur une plateforme et ce qu'il faut refuser d'y ajouter.</p>
+  </div>
+</section>
+
+<div class="pied">
+  <p>Extension conçue au sein de la Direction des Curricula et des Innovations Pédagogiques, ministère chargé de la formation professionnelle et technique, Sénégal. Installée sur e-jàng en septembre 2026.</p>
+  <p><strong>Oumar SALL</strong>, technopédagogue et ingénieur pédagogique. Voir les <a href="https://oumarsall3.github.io/" style="color: var(--bleu);">autres réalisations</a> ou le <a href="https://github.com/oumarsall3/cahier-de-texte-ejang" style="color: var(--bleu);">dépôt de présentation</a>.</p>
+</div>
+
+</main>
+</body>
+</html>

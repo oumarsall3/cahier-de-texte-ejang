@@ -20,7 +20,7 @@ Le tableau de bord de la direction : cinq tuiles, trois couleurs, un seul geste 
 
 Une séance visée par le formateur puis confirmée par la classe. L'erreur est corrigée par une rectification signée et datée : l'original reste lisible, l'empreinte atteste que le contenu visé n'a pas bougé.
 
-*Captures produites sur un banc de démonstration alimenté par des données fictives : l'établissement et les personnes portent des noms d'arbres et de fruits, précisément pour qu'aucune image ne puisse être confondue avec un établissement ou une personne réels.*
+*Captures produites sur un banc de démonstration alimenté par des données fictives : l'établissement, les personnes et les séances y sont inventés. Toute ressemblance de nom avec une personne réelle serait fortuite.*
 
 ---
 
